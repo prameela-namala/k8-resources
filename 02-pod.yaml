@@ -4,7 +4,7 @@ metadata:
   name: nginx
   labels:
 spec:
-  containers:
+  container:
   # docker run -d  --name nginx nginx
   - name: nginx
   - image: nginx  
