@@ -6,7 +6,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   capacity:
-    storage: 20Gi
+    storage: 50Gi
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
@@ -33,7 +33,7 @@ metadata:
     purpose: ebs-static
 spec:
    nodeselector: 
-    topology.kubernetes.io/zone=us-east-1c
+    topology.kubernetes.io/zone=us-east-1a
    containers:
     - name: nginx
       image: nginx
