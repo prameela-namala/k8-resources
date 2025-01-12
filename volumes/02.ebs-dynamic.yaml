@@ -10,7 +10,7 @@ spec:
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
-    volumeHandle: vol-08e0c4ca4aed0cfc2
+    volumeHandle: vol-0e7473a5b4cfef947
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -29,8 +29,6 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: ebs-static
-  lables: 
-    purpose: ebs-static
 spec:
    nodeselector: 
     topology.kubernetes.io/zone=us-east-1c
@@ -58,4 +56,4 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 80   
-      #nodePort: 30007
+      nodePort: 30007
